@@ -33,7 +33,8 @@ function cf_the_editor_field_type($fields){
 		"field"		=>	__("Visual Editor", "cf-the-editor"),
 		"file"		=>	CF_THEEDITOR_PATH . "field.php",
 		"category"	=>	__("Special", "cf-the-editor") .','. __("Text Fields", "cf-the-editor"),
-		"description" => __('Use the WP Editor', "cf-the-editor"),				
+		"description" => __('Use the WP Editor', "cf-the-editor"),
+		"viewer"	=>	'cf_the_editor_viewer',
 		"setup"		=>	array(
 			"preview"	=>	CF_THEEDITOR_PATH . "preview.php",
 		)
@@ -42,3 +43,7 @@ function cf_the_editor_field_type($fields){
 	return $fields;
 }
 add_filter( 'caldera_forms_get_field_types', 'cf_the_editor_field_type' );
+
+function cf_the_editor_viewer( $value ){
+	return htmlspecialchars_decode( $value );
+}
