@@ -32,7 +32,7 @@ function cf_the_editor_field_type($fields){
 	$fields['visual_editor'] = array(
 		"field"		=>	__("Visual Editor", "cf-the-editor"),
 		"file"		=>	CF_THEEDITOR_PATH . "field.php",
-		"category"	=>	__("Special", "cf-the-editor") .','. __("Text Fields", "cf-the-editor"),
+		"category"	=>	__("Special", "caldera-forms") .','. __("Text Fields", "caldera-forms"),
 		"description" => __('Use the WP Editor', "cf-the-editor"),
 		"viewer"	=>	'cf_the_editor_viewer',
 		"setup"		=>	array(
